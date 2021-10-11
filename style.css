@@ -101,7 +101,7 @@ i.bi-plus-circle, i.bi-arrow-repeat, i.bi-box-arrow-in-down {
   text-shadow: -1px 2px 10px grey;
 }
 
-@media screen and (min-width: 800px),(orientation:landscape) {
+@media screen and (min-width: 800px) {
   .bi-dice-1, .bi-dice-2, .bi-dice-3, .bi-dice-4, .bi-dice-5, .bi-dice-6{
     font-size: 300px;
   }
@@ -110,7 +110,27 @@ i.bi-plus-circle, i.bi-arrow-repeat, i.bi-box-arrow-in-down {
   }
 }
 
-@media screen and (min-width: 800px),(orientation:landscape) {
+@media screen and (min-width: 800px) {
+  div.score1Current, div.score2Current{
+    font-size: 60px;
+    height: 200px;
+    width: 300px;
+  }
+  div.name1, div.name2{
+    font-size: 60px;
+  }
+}
+
+@media screen and (orientation:landscape) {
+  .bi-dice-1, .bi-dice-2, .bi-dice-3, .bi-dice-4, .bi-dice-5, .bi-dice-6{
+    font-size: 300px;
+  }
+  i.bi-plus-circle, i.bi-arrow-repeat, i.bi-box-arrow-in-down{
+    font-size: 70px;
+  }
+}
+
+@media screen and (orientation:landscape) {
   div.score1Current, div.score2Current{
     font-size: 60px;
     height: 200px;
