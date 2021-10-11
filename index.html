@@ -2,19 +2,78 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <!-- viewport meta tag to control layout on mobile browsers -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Latest bootstrap compiled and minified CSS -->
+  <!-- Bootstrap compiled and minified CSS & icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
         rel="stylesheet" 
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
         crossorigin="anonymous">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- Lato Font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap" rel="stylesheet">
+  <!-- Local CSS Link -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- SEO -->
+  <meta name="description" content="Projet d'evaluation JavaScript" />
+  <!-- Site name -->
+  <title>The Studi Dice Game</title>
 </head>
 <body>
-  <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+  <div class="play1" id="play1">
+    <div class="play1Name" id="player1Name">
+      <div class="name1">PLAYER 1</div>
+      <div class="indicatorPlay1" style="display:block"></div>
+      <div class="score1Global" id="score1Global">0</div>
+    </div>    
+    <div class="score1Current" id="score1Current">
+      <div class= "Current1">CURRENT</div>
+      <div class="score1">0</div>
+    </div>
+  </div>
+  <div class = "button">
+    <i class="bi bi-plus-circle newGame" id="newGame"> NEW GAME</i>
+    <div class="diceContainer">
+        <i class="bi bi-dice-1"></i>    
+      <div class="dice dice2" style= "display:none;">
+        <i class="bi bi-dice-2"></i>      
+      </div>
+      <div class="dice dice3" style= "display:none;">
+        <i class="bi bi-dice-3"></i>      
+      </div>
+      <div class="dice dice4" style= "display:none;">
+        <i class="bi bi-dice-4"></i>
+       </div>
+      <div class="dice dice5" style= "display:none;">
+        <i class="bi bi-dice-5"></i>
+      </div>
+      <div class="dice dice6" style= "display:none;">
+        <i class="bi bi-dice-6"></i>
+      </div>
+    </div>
+    <div class="diceAction">
+      <i class="bi bi-arrow-repeat rollDice" id="rollDice"> ROLL DICE</i>
+      <br>
+      <i class="bi bi-box-arrow-in-down hold" id="hold"> HOLD</i>
+    </div>
+  </div>
+  <div class="play2" id="play2">
+    <div class="play2Name" id="player2Name" >
+      <div class="name2">PLAYER 2</div>
+      <div class="indicatorPlay2" style="display:none"></div>    
+      <div class="score2Global" id="score2Global">0</div>
+    </div>
+    <div class="score2Current" id="score2Current">
+      <div class= "Current1">CURRENT</div>
+      <div class="score1">0</div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 
   crossorigin="anonymous"></script>
-  <script src="scrip.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

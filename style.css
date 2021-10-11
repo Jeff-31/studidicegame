@@ -1,0 +1,125 @@
+* {
+  font-family: 'Lato',sans-serif;
+}
+
+html {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color:burlywood
+}
+body {
+  height: 95vh;
+  width: 95vw;
+  margin:2.5vh 2.5vw 2.5vh 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+  background:linear-gradient(to right,
+  honeydew 2%,
+  honeydew 50%,
+  white 50%,
+  white 100%);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.play1, .play2{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  min-height: 95vh;
+  align-items:center;
+  justify-content: space-around;
+}
+
+div.score1Current, div.score2Current{
+  font-size: 4vw;
+  height: 15vh;
+  width: 22vw;
+  background-color: indianred;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align:center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+}
+
+.score1, .score2 {
+  color:white;
+  font-size: 6vh;
+}
+
+div.score1Global, .score2Global {
+  color: crimson;
+  font-size: 10vh;
+  text-align:center;
+}
+
+div.name1, div.name2{
+  font-size: 5vw;
+  text-align:center;
+  float: left;
+}
+
+.indicatorPlay1, .indicatorPlay2  {
+  height: 2vw;
+  width: 2vw;
+  box-shadow: inset 0 0 1px 1px green;
+  background: radial-gradient(white, green,green);
+  border-radius: 1vw;
+  float: right;
+  }
+
+  .button{
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+    align-items:center;
+    padding-top: 7vh;
+    padding-bottom: 18vh;
+    text-align:center;
+    white-space: nowrap;
+    justify-content: space-between;
+  }
+
+i.bi-plus-circle, i.bi-arrow-repeat, i.bi-box-arrow-in-down {
+  font-size: 5vw;
+}
+
+.bi-dice-1, .bi-dice-2, .bi-dice-3, .bi-dice-4, .bi-dice-5, .bi-dice-6{
+  font-size: 40vw;
+  max-width: 40vh;
+  color:dimgrey;
+   border-radius: 4vw;
+  text-shadow: -1px 2px 10px grey;
+}
+
+@media screen and (min-width: 800px) {
+  .bi-dice-1, .bi-dice-2, .bi-dice-3, .bi-dice-4, .bi-dice-5, .bi-dice-6{
+    font-size: 300px;
+  }
+  i.bi-plus-circle, i.bi-arrow-repeat, i.bi-box-arrow-in-down{
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  div.score1Current, div.score2Current{
+    font-size: 60px;
+    height: 200px;
+    width: 300px;
+  }
+  div.name1, div.name2{
+    font-size: 60px;
+  }
+}
+
+
+
