@@ -119,8 +119,6 @@ let globalScoreUpdate = () => {
       document.body.style.background="linear-gradient(90deg, lightGrey 50%, white 50%)";
       break;
   }
-
-  
 }
 
 //newGame
@@ -140,7 +138,6 @@ let newGame = () => {
   document.getElementById('rollDice').style.visibility = "visible";
   document.getElementById('hold').style.visibility = "hidden";
 }
-
 
 //events
 btnRollDice.addEventListener('click', roll);
