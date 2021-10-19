@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <!-- viewport meta tag to control layout on mobile browsers -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap compiled and minified CSS & icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- Lato Font loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,74 +20,88 @@
   <!-- Site name -->
   <title>The Studi Dice Game</title>
 </head>
+
 <body>
   <div class="play1" id="play1">
     <div class="play1Name" id="player1Name">
       <div class="name1">PLAYER 1</div>
       <div class="indicatorPlay1" id="indicatorPlay1" style="display:none"></div>
       <div class="score1Global" id="score1Global">0</div>
-    </div>    
+    </div>
     <div class="score1Current" id="score1Current">
-      <div class= "Current1">CURRENT</div>
+      <div class="Current1">CURRENT</div>
       <div class="score1" id="score1">0</div>
     </div>
   </div>
-  <div class = "button">
-    <button class="bi bi-info-circle btn btn-outline-dark shadow" data-toggle="modal" data-target="#rules">RULES</button>
-      <div class="modal fade rules" id="rules" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="button">
+    <button class="bi bi-info-circle btn btn-outline-dark shadow" data-toggle="modal"
+      data-target="#rules">RULES</button>
+    <div class="modal fade rules" id="rules" tabindex="-1" role="dialog" aria-labelledby="ModalLongTitle"
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Règles</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-              <p> Le jeu comprend 2 joueurs sur un seul et même écran.</p>
-              <p>Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).</p>
-              <p>À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le résultat d’un lancer est ajouté au ROUND.</p>
-              <p>Lors de son tour, le joueur peut décider à tout moment de:<br>
-              -Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce sera alors le tour de l’autre joueur.<br>
-              -Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.</p>
-              <p>Le premier joueur qui atteint les 100 points sur global gagne le jeu.
-              </p>              
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLongTitle">Règles</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p> Le jeu comprend 2 joueurs sur un seul et même écran.</p>
+            <p>Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).</p>
+            <p>À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le
+              souhaite. Le résultat d’un lancer est ajouté au ROUND.</p>
+            <p>Lors de son tour, le joueur peut décider à tout moment de :<br>
+              - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL.<br>
+              Ce sera alors le tour de l’autre joueur.<br>
+              - Lancer le dé.<br>
+              S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.</p>
+            <p>Le premier joueur qui atteint les 100 points sur le GLOBAL gagne le jeu.
+            </p>
+          </div>
         </div>
-        </div>
       </div>
-      </div>
-      <boutton class="bi bi-plus-circle btn btn-outline-dark shadow newGame" id="newGame"> NEW GAME</boutton>
-    <div class="diceContainer" id="diceContainer">     
-        <i class="dice dice1 bi bi-dice-1" id="dice1" style= "display:none;"></i>    
-        <i class="dice dice2 bi bi-dice-2" id="dice2" style= "display:none;"></i>
-        <i class="dice dice3 bi bi-dice-3" id="dice3" style= "display:none;"></i>
-        <i class="dice dice4 bi bi-dice-4" id="dice4" style= "display:none;"></i>
-        <i class="dice dice5 bi bi-dice-5" id="dice5" style= "display:none;"></i>
-        <i class="dice dice6 bi bi-dice-6" id="dice6" style= "display:none;"></i>
+    </div>
+    <button class="bi bi-plus-circle btn btn-outline-dark shadow newGame" id="newGame"> NEW GAME</button>
+    <div class="diceContainer" id="diceContainer">
+      <i class="dice dice1 bi bi-dice-1" id="dice1" style="display:none;"></i>
+      <i class="dice dice2 bi bi-dice-2" id="dice2" style="display:none;"></i>
+      <i class="dice dice3 bi bi-dice-3" id="dice3" style="display:none;"></i>
+      <i class="dice dice4 bi bi-dice-4" id="dice4" style="display:none;"></i>
+      <i class="dice dice5 bi bi-dice-5" id="dice5" style="display:none;"></i>
+      <i class="dice dice6 bi bi-dice-6" id="dice6" style="display:none;"></i>
     </div>
     <div class="diceAction">
-      <button class="bi bi-arrow-repeat btn btn-outline-secondary shadow rollDice" id="rollDice" style="visibility:hidden;"> ROLL DICE</button>
+      <button class="bi bi-arrow-repeat btn btn-outline-secondary shadow rollDice" id="rollDice"
+        style="visibility:hidden;"> ROLL DICE</button>
       <br>
-      <button class="bi bi-box-arrow-in-down hold btn btn-outline-secondary shadow hold" id="hold" style="visibility:hidden;" > HOLD</button>
+      <button class="bi bi-box-arrow-in-down hold btn btn-outline-secondary shadow hold" id="hold"
+        style="visibility:hidden;"> HOLD</button>
     </div>
   </div>
   <div class="play2" id="play2">
-    <div class="play2Name" id="player2Name" >
+    <div class="play2Name" id="player2Name">
       <div class="name2">PLAYER 2</div>
-      <div class="indicatorPlay2" id="indicatorPlay2" style="display:none"></div>    
+      <div class="indicatorPlay2" id="indicatorPlay2" style="display:none"></div>
       <div class="score2Global" id="score2Global">0</div>
     </div>
     <div class="score2Current" id="score2Current">
-      <div class= "Current1">CURRENT</div>
+      <div class="Current1">CURRENT</div>
       <div class="score1" id="score2">0</div>
     </div>
   </div>
-  
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js">
-</script>  
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

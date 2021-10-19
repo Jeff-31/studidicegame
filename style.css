@@ -28,6 +28,7 @@ body {
 
 .btn{
   background: white;
+  margin:5px;
 }
 
 .play1, .play2{
@@ -37,6 +38,7 @@ body {
   min-height: 95vh;
   align-items:flex-end;
   justify-content: space-around;
+  margin: auto
 }
 
 .play2{
@@ -79,29 +81,24 @@ div.name1, div.name2{
   background: radial-gradient(white, green,green);
   border-radius: 1vw;
   float: right;
-  }
-
-.btn{
-  margin:5px;
 }
-  .button{
-    display: flex;
-    flex-direction: column;
-    min-height: 95vh;
-    align-items:center;
-    text-align:center;
-    white-space: nowrap;
-    justify-content:flex-start;
-    padding: 5px;
-  }
-  
-  .rules {
-    white-space:normal;
-    text-align:left;
-  }
 
-.bi-plus-circle, .bi-arrow-repeat, bi-box-arrow-in-down {
-  font-size: 5vm;
+
+.button{
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  align-items:center;
+  text-align:center;
+  white-space: nowrap;
+  justify-content:flex-start;
+
+  padding-bottom: 15vh
+}
+  
+.rules {
+  white-space:normal;
+  text-align:left;
 }
 
 .bi-dice-1, .bi-dice-2, .bi-dice-3, .bi-dice-4, .bi-dice-5, .bi-dice-6{
@@ -110,6 +107,10 @@ div.name1, div.name2{
   color:dimgrey;
   border-radius: 4vw;
   text-shadow: -1px 2px 10px grey;
+}
+
+.diceContainer{
+  margin: auto
 }
 
 @media (orientation:landscape){
@@ -133,9 +134,9 @@ div.name1, div.name2{
 }
 
 @media (orientation:landscape) {
-.indicatorPlay1, .indicatorPlay2  {
-  height: 10px;
-  width: 10px;
-  border-radius: 5px;
+  .indicatorPlay1, .indicatorPlay2  {
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
   }
 }
